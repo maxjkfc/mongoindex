@@ -1,0 +1,2 @@
+# mongoindex
+create mongo index
