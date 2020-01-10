@@ -1,0 +1,36 @@
+mongo:
+  - name: "t1mongo"
+    host: "localhost:27017"
+    user: ""
+    password: ""
+    database: "t1mongo"
+    ssl: false
+    collection:
+      - name: "t1"
+        indexs:
+          - name: "t1-search-index"
+            keys:
+              - "-name" # - is reversed index
+              - "age"
+            unique: false #
+            background: true
+            sparse: false
+            expireAfter: 0
+          - name: "t1-insert-index"
+            keys:
+              - "no" # - is reversed index
+            unique: true #
+            background: true
+            sparse: false
+            expireAfter: 0
+      - name: "t2"
+        indexs:
+          - name: "t2-search-index"
+            keys:
+              - "-name" # - is reversed index
+              - "age"
+            unique: false #
+            background: true
+            sparse: false
+            expireAfter: 0
+
